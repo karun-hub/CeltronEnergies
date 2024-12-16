@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Systems</title>
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+</head>
+<body>
+
+  <div class="container-fluid hero-section" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/celtronenergies-20b67.appspot.com/o/ongrid.jpg?alt=media&token=c614e1bd-efa1-4f76-b2ab-e25162007788'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh;">
+    <div class="row h-100">
+      <!-- ON GRID SOLAR SYSTEM -->
+      <div class="col-md-6 d-flex flex-column justify-content-center text-left p-5 text-white" style="background: rgba(0, 0, 0, 0.5);">
+        <h1>ON GRID SOLAR SYSTEM</h1>
+        <h2>What is Solar On Grid?</h2>
+        <p>The On-grid solar system is connected with a utility grid and this system would work only if the grid is available. In case of a power cut, the system will not work and hence the On-grid system is also termed a Grid-tied system. A grid is required since the inverter needs to be provided a reference voltage and the inverter needs to sync with the grid in order to export energy back into the grid.</p>
+        <h3>How it works?</h3>
+        <p>The On grid solar system is connected with a utility grid and this system would work only if the grid is available. In case of a power cut, the system will not work and hence the On-grid system is also termed a Grid-tied system. A grid is required since the inverter needs to sync with the grid in order to export energy back into the grid.</p>
+        <!-- <a href="#" class="btn btn-warning text-white mt-3">
+          <i class="bi bi-play-circle"></i> Watch Video
+        </a> -->
+        <!-- <a href="" class="glightbox btn-watch-video d-flex align-items-center">
+          <i class="bi bi-play-circle"></i><span>Watch Video</span>
+        </a> -->
+        <div class="video-section">
+          <i class="bi bi-play-circle" style="color: orange;"></i>
+          <span style="color: orange;">Watch Video</span>
+      </div>
+        <br><br>
+        <a href="#" class="text-white" id="viewMoreBtn">View More...</a>
+      </div>
+  
+      <!-- OFF GRID SOLAR SYSTEM -->
+      <div class="col-md-6 d-flex flex-column justify-content-center text-left p-5 text-white" style="background: rgba(0, 0, 0, 0.7);">
+        <h1>OFF GRID SOLAR SYSTEM</h1>
+        <h2>Why Off Grid?</h2>
+        <p>Off-grid solar systems are independent power solutions that operate without relying on the utility grid. Ideal for remote locations or areas prone to power outages, these systems generate and store solar energy in batteries, providing a reliable and sustainable power source. They consist of solar panels, an inverter, and a battery storage system.</p>
+        <div class="video-section">
+          <i class="bi bi-play-circle" style="color: orange;"></i>
+          <span style="color: orange;">Watch Video</span>
+      </div>
+      </div>
+    </div>
+  </div>
+  <section id="alt-services" class="alt-services" style="display: none;">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+      <div class="row justify-content-around gy-4">
+        <!-- Image Column -->
+        <div class="col-lg-6 img-bg aos-init aos-animate" 
+             style="background-image: url('assets/img/ongrid2.jpg'); background-size: cover; background-position: center; height: 50vh;width: 40%;" 
+             data-aos="zoom-in" data-aos-delay="100">
+        </div>
+  
+        <!-- Text Column -->
+        <div class="col-lg-5 d-flex flex-column justify-content-center">
+          <h3>Types of Solar On Grid Systems</h3>
+          <p>Solar technology in the rooftop sector has improved drastically over the past few years...</p>
+  
+          <div class="icon-box d-flex position-relative aos-init aos-animate" data-aos="" data-aos-delay="100">
+            <i class="bi bi-1-square flex-shrink-0"></i>
+            <div><h4><a class="stretched-link">String Inverter</a></h4></div>
+          </div>
+  
+          <div class="icon-box d-flex position-relative aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+            <i class="bi bi bi-2-square flex-shrink-0"></i>
+            <div><h4><a class="stretched-link">Micro Inverter</a></h4></div>
+          </div>
+  
+          <div class="icon-box d-flex position-relative aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+            <i class="bi bi-3-square flex-shrink-0"></i>
+            <div><h4><a class="stretched-link">Power Optimizers</a></h4></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  
+  
+  
+  
+  <style>
+     /* Desktop styles */
+     .img-bg {
+      height: 50vh;
+      background-size: cover;
+      background-position: center;
+    }
+  
+    /* Mobile styles */
+    @media (max-width: 768px) {
+      .img-bg {
+        height: 50vh; /* Adjust the height for mobile */
+        padding: 10px; /* Add padding for mobile */
+      }
+  
+      .col-lg-6, .col-lg-5 {
+        flex: 0 0 100%; /* Ensure columns take full width on mobile */
+        max-width: 100%;
+        text-align: center; /* Center-align text for mobile */
+      }
+  
+      .col-lg-6 {
+        margin-bottom: 20px; /* Add some margin below the image */
+      }
+  
+      .col-lg-5 {
+        padding: 10px; /* Add padding to the text section */
+      }
+    }
+    /* .solar-section {
+  background: url('path-to-your-image') no-repeat center center/cover;
+  padding: 50px;
+  color: white;
+} */
+ .stretched-link{
+  color: orangered;
+ }
+.co {
+        flex: 0 0 auto;
+        /* width: 50%; */
+    }
+ .btn-warning{
+    --bs-btn-bg:  #ff4a17;
+ }
+
+.solar-grid h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.solar-grid h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.solar-grid p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.btn-watch-video {
+  display: inline-block;
+  background-color: #f03b0e;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.view-more {
+  display: inline-block;
+  margin-left: 20px;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-lg-6 {
+  width: 50%;
+}
+
+.col-md-12 {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .col-lg-6 {
+    width: 100%;
+  }
+
+  .solar-grid h1 {
+    font-size: 1.8rem;
+  }
+
+  .solar-grid h3 {
+    font-size: 1.3rem;
+  }
+
+  .solar-grid p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .solar-grid h1 {
+    font-size: 1.5rem;
+  }
+
+  .solar-grid h3 {
+    font-size: 1.2rem;
+  }
+
+  .solar-grid p {
+    font-size: 0.8rem;
+  }
+}
+
+
+  </style>
+
+<script>
+  document.getElementById('viewMoreBtn').addEventListener('click', function() {
+    const section = document.getElementById('alt-services');
+    
+    // Toggle the section visibility
+    if (section.style.display === 'none') {
+      section.style.display = 'block';
+      this.textContent = 'View Less...';  // Change button text to "View Less..."
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      section.style.display = 'none';
+      this.textContent = 'View More...';  // Change button text to "View More..."
+    }
+  });
+</script>
+
+</body>
+</html>
