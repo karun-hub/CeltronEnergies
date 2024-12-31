@@ -17,6 +17,13 @@ Author URL: http://w3layouts.com
   <link rel="stylesheet" href="style-liberty.css">
    <!-- Main CSS File -->
    <link href="assets/css/main.css" rel="stylesheet">
+
+     <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -254,18 +261,33 @@ RIGHT SIDEBAR TOGGLE SECTION
     </header>
   </div>
   <!-- //header -->
-  <!--/w3l-banner-content-->
-  <div class="banner-w3l-main">
-    <div class="w3l-banner-content">
-      <div class="container">
-        <div class="bannerhny-info text-center">
-          <h3 class="">The Future May Be Ahead, But We Are on It</h3>
-        </div>
-      </div>
-    </div>
+  <section id="hero" class="hero section dark-background">
 
+    <!-- <img src="assets/img/bg.jpg" alt="" data-aos="fade-in"> -->
+     <div class=" video-container">
+    <video autoplay muted loop playsinline poster="assets/img/bg.jpg" class="video-background ">
+      <source src="assets/video/roboBg.mp4" type="video/mp4">
+      <p>Your browser does not support the video tag. You can download the video <a href="assets/video/roboBg.mp4">here</a>.</p>
+    </video>
+    
+    <!-- Image Section -->
+    
+<!-- Image with correct class and style -->
+<div class="container">
+  <div class="bannerhny-info text-center">
+    <h3 style="font-size: 49px;
+    line-height: 92px;
+    font-weight: 900;
+    text-transform: capitalize;
+    color: #fff;">The Future May Be Ahead, But We Are on It</h3>
   </div>
-  <!--//w3l-banner-content-->
+</div>
+</div>
+
+
+    
+
+  </section><!-- /Hero Section -->
   <!-- //w3l-upper-sec-->
   <section class=" banner-w3-main w3l-index3 py-5" id="about">
     <div class="container">
@@ -313,7 +335,7 @@ RIGHT SIDEBAR TOGGLE SECTION
         </div>
       </div>
     </div>
-    <div class="container py-lg-5 py-md-3">
+    <div class="container py-lg-5 py-md-3" style="        padding-top: 13rem !important;">
       <div class="row">
         <div class="col-lg-6">
           <div class="position-relative">
@@ -332,7 +354,7 @@ RIGHT SIDEBAR TOGGLE SECTION
       </div>
     </div>
   </section>
-  <section class=" banner-w3-main w3l-index3 py-5" id="about">
+  <section class=" banner-w4-main  w3l-index3 py-5" id="about">
     
     <div class="container py-lg-5 py-md-3">
       <div class="row">

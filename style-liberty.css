@@ -15013,7 +15013,7 @@ a.navbar-brand img {
 
 /*-- homeblock1 --*/
 /*--/banner--*/
-.banner-w3l-main {
+/* .banner-w3l-main {
   z-index: 0;
   position: relative;
   display: grid;
@@ -15025,7 +15025,8 @@ a.navbar-brand img {
   background-position: top;
   background-attachment: fixed;
   min-height: 700px;
-}
+} */
+
 .banner-w3-main {
   z-index: 0;
   position: relative;
@@ -15033,16 +15034,60 @@ a.navbar-brand img {
   align-items: center;
   background-size: cover;
   -ms-background-size: cover;
-  background-image: linear-gradient(to right, rgb(12 6 3 / 75%), rgb(12 3 0 / 66%)), url(assets/img/robo1.jpg);
+  background-image: linear-gradient(to right, rgb(12 6 3 / 75%), rgb(12 3 0 / 66%)), url(assets/img/robo3.jpg);
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: top;
   background-attachment: fixed;
   min-height: 700px;
 }
-
-.bannerhny-info {
-  margin: 0 auto;
+.banner-w4-main {
+  z-index: 0;
+  position: relative;
+  display: grid;
+  align-items: center;
+  background-size: cover;
+  -ms-background-size: cover;
+  background-image: linear-gradient(to right, rgb(12 6 3 / 75%), rgb(12 3 0 / 66%)), url(assets/img/robo2.png);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  min-height: 700px;
 }
+.banner-w4-bess {
+  z-index: 0;
+  position: relative;
+  display: grid;
+  align-items: center;
+  background-size: cover;
+  -ms-background-size: cover;
+  background-image: linear-gradient(to right, rgb(12 6 3 / 75%), rgb(12 3 0 / 66%)), url(assets/img/ongrid.jpg);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  min-height: 700px;
+}
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* .bannerhny-info {
+  margin: 0 auto;
+} */
 
 .w3l-banner-content h3  {
   font-size: 49px;
