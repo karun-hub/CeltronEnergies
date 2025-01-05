@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive FAQ Section</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section class="faq-section">
+    <div class="container">
+      <h1>Frequently Asked Questions</h1>
+      <div class="faq-item">
+        <button class="faq-question">
+          What is your return policy?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>You can return items within 30 days of purchase. Make sure the item is in its original condition.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          How do I track my order?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Log into your account, go to 'My Orders', and click on the tracking link for your order.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          Do you ship internationally?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes, we ship to over 50 countries worldwide. Shipping charges and times may vary.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const faqAnswer = button.nextElementSibling;
+      const icon = button.querySelector('.icon');
+  
+      if (faqAnswer.style.maxHeight) {
+        faqAnswer.style.maxHeight = null;
+        icon.textContent = '+';
+      } else {
+        document.querySelectorAll('.faq-answer').forEach(answer => answer.style.maxHeight = null);
+        document.querySelectorAll('.icon').forEach(i => i.textContent = '+');
+        faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 'px';
+        icon.textContent = '-';
+      }
+    });
+  });
+  </script>
+  <script src="script.js"></script>
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    }
+
+    .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    }
+
+    h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    }
+
+    .faq-section {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    }
+
+    .faq-item {
+    border-bottom: 1px solid #ddd;
+    }
+
+    .faq-item:last-child {
+    border-bottom: none;
+    }
+
+    .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease;
+    }
+
+    .faq-question:hover {
+    background: #f0f0f0;
+    }
+
+    .icon {
+    font-size: 1.5rem;
+    color: #666;
+    }
+
+    .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 15px;
+    }
+
+    .faq-answer p {
+    margin: 15px 0;
+    font-size: 1rem;
+    color: #333;
+    }
+
+  </style>
+</body>
+</html>

@@ -570,6 +570,10 @@ mark,
   max-width: 100%;
   height: auto;
 }
+.img-lead {
+  max-width: 90%;
+  height: auto;
+}
 
 .img-thumbnail {
   padding: 0.25rem;
@@ -10887,7 +10891,7 @@ a.text-dark:focus {
   }
 
   a:not(.btn) {
-    text-decoration: underline;
+    /* text-decoration: underline; */
   }
 
   abbr[title]::after {
@@ -15060,7 +15064,7 @@ a.navbar-brand img {
   align-items: center;
   background-size: cover;
   -ms-background-size: cover;
-  background-image: linear-gradient(to right, rgb(12 6 3 / 75%), rgb(12 3 0 / 66%)), url(assets/img/ongrid.jpg);
+  background-image: linear-gradient(to right, rgb(12 6 3 / 75%), rgb(12 3 0 / 66%)), url(assets/img/solar-home-battery.jpg);
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: top;
   background-attachment: fixed;
