@@ -7,6 +7,8 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Template CSS -->
   <link rel="stylesheet" href="style-liberty.css">
@@ -24,7 +26,7 @@
 
       <nav id="navmenu" class="navmenu">
         <ul style="color: #e6ebff;">
-          <li><a href="#hero" class="active" style="color: #e6ebff;">Home</a></li>
+          <li><a href="#hero"  style="color: #e6ebff;">Home</a></li>
           <li><a href="#about" style="color: #e6ebff;">About</a></li>
           <li><a href="#services" style="color: #e6ebff;">Services</a></li>
           <li class="dropdown"><a href="#" style="color: #e6ebff;"><span>Products</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -33,7 +35,7 @@
             <li><a href="starter-page.html">BESS</a></li>
             <li><a href="Robotics.html">Robotics</a></li>
           </ul>
-          <li class="dropdown"><a href="#" style="color: #e6ebff;"><span>Projects</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="#" class="active" style="color: #e6ebff;"><span>Projects</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <!-- <a href="service-details.html" class="stretched-link"></a> -->
               <li><a href="project-details.html">OnGrid</a></li>
@@ -68,7 +70,7 @@
   
   <section class=" banner-w4-bess  w3l-index3 ongrid  " id="about">
     
-    <div class="container py-lg-5 py-md-3">
+    <div class="container py-lg-5 py-md-3" >
       <br><br>
       <div class="row">
         
@@ -92,28 +94,26 @@
 
       </div>
       <br><br>
-      <div class="container">
+      <div class="container" style="background: white; padding-bottom: 20px;">
         <div class="row upper-sec-grids">
           <div class="col-lg-7 upper-sec-grids-left pr-lg-5">
-            <!-- <h6 class="title-subhny mb-2"><span>Revolutionizing Solar Cleaning with Cutting-Edge Robotics</span></h6> -->
             <h3 class="title-w3l mb-3" style="font-size: larger;">Types of Solar On Grid Systems</h3>
-            <p class="mb-3" style="font-size: medium;">Solar technology in the rooftop sector has improved drastically over the past few years and has catered to the growing demands of the discerning public. 
-              There are many types of rooftops and each one of them has varying conditions like different roofs, different orientations, shadow issues, etc. 
+            <p class="mb-3" style="font-size: medium;">
+              Solar technology in the rooftop sector has improved drastically over the past few years and has catered to the growing demands of the discerning public.
+              There are many types of rooftops and each one of them has varying conditions like different roofs, different orientations, shadow issues, etc.
               Within on-grid solar PV systems, there are mainly three different types of systems:
             </p>
-            
           </div>
           <div class="col-lg-5 upper-sec-grids-right mt-lg-0 mt-5">
-  
-            <div class="upper-wrap-grid mb-4">
+            <div class="upper-wrap-grid mb-4" onclick="showImage('assets/img/string_inverter.png')">
               <div class="upper-icon">
                 <span class="fa fa-users"></span>
               </div>
-              <div class="upper-info">
-                <h4><a href="#url"> String Inverter</a></h4>
+              <div class="upper-info"> 
+                <h4><a href="#url">String Inverter</a></h4>
               </div>
             </div>
-            <div class="upper-wrap-grid mb-4">
+            <div class="upper-wrap-grid mb-4" onclick="showImage('assets/img/micro_inverter.png')">
               <div class="upper-icon">
                 <span class="fa fa-linode"></span>
               </div>
@@ -121,7 +121,7 @@
                 <h4><a href="#url">Micro Inverter</a></h4>
               </div>
             </div>
-            <div class="upper-wrap-grid">
+            <div class="upper-wrap-grid" onclick="showImage('power-optimizers.jpg')">
               <div class="upper-icon">
                 <span class="fa fa-thumbs-up"></span>
               </div>
@@ -129,9 +129,10 @@
                 <h4><a href="#url">Power Optimizers</a></h4>
               </div>
             </div>
-  
           </div>
         </div>
+        <!-- Image display section -->
+        <div id="image-container" class="text-center mt-4"></div>
       </div>
     </div>
     <div class="container py-lg-5 py-md-3">
@@ -153,13 +154,229 @@
 
       </div>
     </div>
+    
+    <div class="container" style="background: white; padding-bottom: 20px; border-radius: 20px;">
+      <div class="row upper-sec-grids">
+        <div class="col-lg-7 upper-sec-grids-left pr-lg-5">
+          <h2 class="title-w3l mb-3" style="font-weight: 800;">Hybrid SOLAR SYSTEM</h2>
+          <p class="mb-3" style="font-size: medium;">Solar power systems come in three varieties; on-grid, off-grid, and hybrid.
+            A hybrid solar system has the good features of both on-grid and off-grid solar systems, minus their flaws. 
+            The hybrid solar system is connected to the grid via net metering and also has a battery backup to store the power. 
+            The energy that solar panels collect goes through a hybrid solar inverter to generate electricity.
+             The most important benefit of a hybrid solar system is the power backup facility. 
+             It means you can continue using electricity without disruptions even during power outages. 
+             A battery backup helps store the extra power generated by the solar system during peak hours.
+          </p>
+        </div>
+        <div class="col-lg-5 upper-sec-grids-right mt-lg-0 mt-5">
+          <div class="position-relative">
+            <img src="assets/img/hybrid2.jpg" alt="" class="radius-image img-fluid">
+          </div>
+          
+        </div>
+      </div>
+      <div class="row upper-sec-grids" style=" padding-bottom: 15px;">
+        <div class=" upper-sec-grids-left pr-lg-5">
+          <h2 class="title-w3l mb-3" style="font-weight: 800;">Types of Solar Hybrid Systems</h2>
+          <p class="mb-3" style="font-size: medium;">Solar panels can be coupled, or linked, to a battery either through alternating current (AC) coupling or direct current (DC) coupling. 
+            AC current flows rapidly on electricity grids both forward and backward. DC current, on the other hand, flows only in one direction.
+          </p>
+        </div>
+      </div>
+      <div class="row upper-sec-grids">
+        <div class="col-lg-6 upper-sec-grids-left pr-lg-5">
+          <div class="position-relative tab-content">
+            <div class="tab-pane fade active show" id="features-tab-1">
+              <div class="container ">
+                <h3 style="font-weight: bold;">DC Coupling </h3>
+                <br>
+                <img src="assets/img/hybriddc.png" alt="" class="img-fluid">
+                <br><br>
+                <p style="font-size: medium;font-weight: bold;">
+                  DC-coupled systems typically use solar charge controllers, or regulators, to charge the battery from the solar panels, along with a battery inverter to convert the electricity flow to AC.
+                  The solar panels and battery module use the same inverter and share the grid interconnection, reducing the cost of equipment. 
+                  This also reduces power losses from inverting the current and running separate interconnection lines to the grid, as the solar array and battery are dispatched as a single facility. But this offers less flexibility than an AC system.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 upper-sec-grids-right mt-lg-0 mt-5">
+          <div class="position-relative ">
+            <div class="tab-pane fade active show" id="features-tab-1">
+              <div class="container ">
+                <h3 style=" font-weight: bold;">AC Coupling </h3>
+                <br>
+                <img src="assets/img/hybridac.png" alt="" class="img-fluid">
+                <br><br>
+                <p style="font-size: medium;font-weight: bold;">
+                  In AC-coupled systems, there are separate inverters for the solar panels and the battery. 
+                  Both the solar panels and the battery module can be discharged at full power and they can either be dispatched together or independently, creating flexibility in how the system operates. 
+                  The solar panels and battery can either share an interconnection to the grid or run on separate interconnections.</p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <!-- Image display section -->
+      <!-- <div id="image-container" class="text-center mt-4"></div> -->
+    </div>
+
+  </section>
+  <section class="faq-section">
+    <div class="container">
+      <h1>Frequently Asked Questions</h1>
+      <div class="faq-item">
+        <button class="faq-question">
+          What is an on-grid solar system?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>An on-grid solar system is a solar setup connected to the utility grid, providing electricity directly from solar panels while relying on the grid for backup power.
+          </p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          How does net metering work in an on-grid solar system?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Net metering allows you to send excess solar energy to the grid and earn credits, which can offset your future electricity bills.
+          </p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          Is an on-grid solar system suitable for residential use?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes, on-grid systems are ideal for homes with access to the utility grid and moderate to high energy consumption.
+          </p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          What are the advantages of an on-grid solar system?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Lower installation costs (no batteries).<br>
+            Reduced electricity bills.<br>
+            Access to net metering benefits.<br>
+            Easy scalability.            
+          </p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          Can I install an on-grid solar system without batteries?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes, on-grid systems do not require batteries, making them more cost-effective and simpler to maintain.
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
   
   
  
   
   
+  <script>document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const faqAnswer = button.nextElementSibling;
+      const icon = button.querySelector('.icon');
   
+      if (faqAnswer.style.maxHeight) {
+        faqAnswer.style.maxHeight = null;
+        icon.textContent = '+';
+      } else {
+        document.querySelectorAll('.faq-answer').forEach(answer => answer.style.maxHeight = null);
+        document.querySelectorAll('.icon').forEach(i => i.textContent = '+');
+        faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 'px';
+        icon.textContent = '-';
+      }
+    });
+  });
+  </script>
+  <script src="script.js"></script>
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    }
+
+    .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    }
+
+    h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    }
+
+    .faq-section {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    }
+
+    .faq-item {
+    border-bottom: 1px solid #ddd;
+    }
+
+    .faq-item:last-child {
+    border-bottom: none;
+    }
+
+    .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease;
+    }
+
+    .faq-question:hover {
+    background: #f0f0f0;
+    }
+
+    .icon {
+    font-size: 1.5rem;
+    color: #666;
+    }
+
+    .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 15px;
+    }
+
+    .faq-answer p {
+    margin: 15px 0;
+    font-size: 1rem;
+    color: #333;
+    }
+
+  </style>
   
   <style>
      /* Desktop styles */
@@ -290,6 +507,12 @@
 
 
   </style>
+  <script>
+    function showImage(imageName) {
+      const imageContainer = document.getElementById('image-container');
+      imageContainer.innerHTML = `<img src="${imageName}" alt="Selected Solar System" style="max-width: 50%; height: auto;">`;
+    }
+  </script>
 
 <script>
   document.getElementById('viewMoreBtn').addEventListener('click', function() {
