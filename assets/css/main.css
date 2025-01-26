@@ -1280,6 +1280,104 @@ section,
     max-width: 100%;
   }
 }
+/* card in amc */
+/* Service Card Styles */
+.service-card {
+  margin: 20px;
+  padding: 30px 20px 40px;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #ffffff, #f9f9f9);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Corner Ribbon for Most Popular */
+.service-card.popular-plan::before {
+  content: "Most Popular";
+  background: linear-gradient(135deg, #ff4500, #ff7f50);
+  color: #fff;
+  font-size: 0.75rem; /* Adjust font size for readability */
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top: 19px;
+  right: -20px; /* Adjusted for better alignment */
+  transform: rotate(45deg); /* Gentle rotation for readability */
+  width: 100px; /* Reduced width to prevent overflow */
+  padding: 5px 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+}
+
+/* Icon Styles */
+.service-card .card-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -40px auto 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+/* Card Content Styles */
+.service-card .card-details {
+  margin-top: 50px;
+  position: relative;
+  z-index: 2;
+  padding: 4px;
+}
+
+.service-card h3 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.service-card p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Color Customizations */
+.silver-plan {
+  background: linear-gradient(135deg, #c0c0c0, #dcdcdc); /* Silver gradient */
+}
+
+.silver-plan .card-icon {
+  background: linear-gradient(135deg, #a9a9a9, #d3d3d3);
+}
+
+.popular-plan {
+  background: linear-gradient(135deg, #ffd700, #ffdf85); /* Gold gradient */
+  box-shadow: 0 12px 30px rgba(255, 215, 0, 0.3);
+  color: #333333;
+}
+
+.popular-plan .card-icon {
+  background: linear-gradient(135deg, #ffcc00, #ffc700);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.5);
+}
+
+.platinum-plan {
+  background: linear-gradient(135deg, #b0e0e6, #afeeee); /* Platinum gradient */
+}
+
+.platinum-plan .card-icon {
+  background: linear-gradient(135deg, #87cefa, #afeeee);
+}
 
 /*--------------------------------------------------------------
 # Clients Section
