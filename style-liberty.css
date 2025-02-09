@@ -14148,7 +14148,7 @@ p {
   #lithium li h5 {
     color: whites !important;
   }
-  .video-background {
+  .video-backgroundlith {
     display: none; /* Hide video on mobile */
   }
   .mobile-background {
@@ -15125,6 +15125,14 @@ a.navbar-brand img {
   align-items: center;
 }
 .video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.video-backgroundlith {
   position: absolute;
   top: 0;
   left: 0;
