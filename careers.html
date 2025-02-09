@@ -204,6 +204,45 @@
             margin-top: 0.5rem;
             animation: fadeIn 2.5s;
         }
+        /* Popup overlay */
+        .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        }
+
+        /* Popup content */
+        .popup-content {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        min-width: 250px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Close button */
+        .close-btn {
+        margin-top: 10px;
+        padding: 8px 12px;
+        border: none;
+        background:#cc5500;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+
+        /* Show popup when active */
+        .popup-overlay.active {
+        display: flex;
+        }
 
     </style>
     <link href="assets/css/main.css" rel="stylesheet">
@@ -276,18 +315,18 @@
             <div class="job-card">
                 <h2>Procurement Engineer</h2>
                 <p>We are looking for a passionate Procurement Engineer to join our team. Optimize supply chain processes and source high-quality materials using the latest industry standards.</p>
-                <button class="apply-btn">Apply Now</button>
+                <button onclick="openPopup()" class="apply-btn">Apply Now</button>
             </div>
 
             <div class="job-card">
                 <h2>Business Development Manager</h2>
                 <p>We are looking for a passionate Business Development Manager to join our team. Drive growth, build strategic partnerships, and unlock new opportunities with innovative solutions.</p>
-                <button class="apply-btn">Apply Now</button>
+                <button onclick="openPopup()" class="apply-btn">Apply Now</button>
             </div>
             <div class="job-card">
                 <h2>Business Development Executive</h2>
                 <p>We are looking for a passionate Business Development Executive to join our team. Identify new opportunities, build strong client relationships, and drive business growth with innovative strategies.</p>
-                <button class="apply-btn">Apply Now</button>
+                <button onclick="openPopup()" class="apply-btn">Apply Now</button>
             </div>
         </section>
 
@@ -296,11 +335,26 @@
             <p>Explore endless possibilities with us. We value talent, creativity, and teamwork.</p>
             <button class="cta-btn">View All Openings</button>
         </section>
+        <div id="popup" class="popup-overlay">
+            <div class="popup-content">
+              <p>Coming Soon ........</p>
+              <button onclick="closePopup()" class="close-btn">Close</button>
+            </div>
+          </div>
     </main>
 
     <footer>
         <p>&copy; 2025 CELTRON ENERGIES. All rights reserved.</p>
     </footer>
+    <script>
+        function openPopup() {
+    document.getElementById("popup").classList.add("active");
+    }
+
+    function closePopup() {
+    document.getElementById("popup").classList.remove("active");
+    }
+    </script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
