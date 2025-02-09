@@ -14019,7 +14019,7 @@ a.text-dark:focus {
   --border-radius-full: 35px;
   --border-color: transparent;
   --border-color-light: #eee;
-  --nav-color: #212D38;
+  /* --nav-color: #212D38; */
   --dropdown-color: #fff;
   --iframe-filter: grayscale(0%);
   --bg-light: rgba(130, 115, 252, .05);
@@ -14131,13 +14131,45 @@ p {
   color: white;
   font-family: 'Roboto', sans-serif;
 }
+.lithium-vedio{
+  display: none;
+}
+.mobile-background {
+  display: none; /* Hide by default */
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
 @media (max-width: 768px) { /* Mobile view */
   #lithium h3, 
   #lithium p, 
   #lithium h4, 
   #lithium li span, 
   #lithium li h5 {
-    color: black !important;
+    color: whites !important;
+  }
+  .video-background {
+    display: none; /* Hide video on mobile */
+  }
+  .mobile-background {
+    display: block; /* Show image on mobile */
+  }
+  .lithium-vedio{
+    display: block;
+  }
+  .banner-w4-lithium
+  {
+    z-index: 0;
+    position: relative;
+    display: grid;
+    align-items: center;
+    background-size: cover;
+    -ms-background-size: cover;
+    background-image: linear-gradient(to right, rgb(12 6 3 / 75%), rgb(12 3 0 / 66%)), url(assets/img/lithiyum.png);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    min-height: 700px;
   }
 }
 
@@ -15082,6 +15114,7 @@ a.navbar-brand img {
   background-attachment: fixed;
   min-height: 700px;
 }
+
 .video-container {
   
   width: 100%;
