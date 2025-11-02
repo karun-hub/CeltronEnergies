@@ -860,7 +860,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
   </footer>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+<div class="cta-container">
+    <div class="cta-button" id="main-cta">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+    <div class="cta-actions">
+        <a href="https://wa.me/9072221810?text=Hello" target="_blank" class="action-btn whatsapp-btn" title="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <a href="tel:9072221810" class="action-btn call-btn" title="Call Us">
+            <i class="fas fa-phone"></i>
+        </a>
+
+        <a href="https://maps.app.goo.gl/crGxfWSJUg5WZgPa7" target="_blank" class="action-btn map-btn" title="Find Our Location">
+            <i class="fas fa-map-marker-alt"></i>
+        </a>
+    </div>
+</div>
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -876,10 +895,121 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script>
+    document.getElementById('main-cta').addEventListener('click', function() {
+        const container = this.closest('.cta-container');
+        container.classList.toggle('active-mobile');
+    });
+</script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <style>
+    /* --- Floating CTA Menu Styles (Desktop/Default) --- */
+
+    .cta-container {
+        position: fixed;
+        bottom: 85px;
+        right: 20px;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+
+    /* Base style for all circular buttons */
+    .cta-button, .action-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+        margin-top: 10px;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+    }
+
+    /* Main CTA Button Style */
+    .cta-button {
+        background-color: #f75c4e; /* Red/Orange color for the main button */
+    }
+    .cta-button:hover {
+        transform: scale(1.05) rotate(5deg);
+    }
+
+    /* Action Buttons (Hidden by default) */
+    .cta-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+    }
+
+    /* Reveal actions on container hover (Desktop) */
+    .cta-container:hover .cta-actions {
+        max-height: 300px;
+    }
+
+    /* Individual Action Button Styles */
+    .action-btn {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    /* Animate the action buttons on container hover (Desktop) */
+    .cta-container:hover .action-btn {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .cta-container:hover .action-btn:nth-child(1) { transition-delay: 0.1s; }
+    .cta-container:hover .action-btn:nth-child(2) { transition-delay: 0.2s; }
+    .cta-container:hover .action-btn:nth-child(3) { transition-delay: 0.3s; }
+
+    /* Individual Color Styles (Keep these the same) */
+    .whatsapp-btn { background-color: #25D366; }
+    .call-btn { background-color: #DD2C00; }
+    .map-btn { background-color: #FFC107; color: #333; }
+    .action-btn:hover { transform: scale(1.1); }
+
+    /* ------------------------------------------------ */
+    /* --- MOBILE OPTIMIZATION (Media Query) --- */
+    /* This code applies to screens smaller than 600px (standard phone size) */
+    @media (max-width: 600px) {
+        /* 1. Adjust Position/Spacing for Mobile */
+        .cta-container {
+            /* Move slightly further from the edge */
+            bottom: 70px;
+            right: 15px;
+        }
+
+        /* 2. Slightly Smaller Buttons for a Cleaner Look */
+        .cta-button, .action-btn {
+            width: 45px;
+            height: 45px;
+            font-size: 18px; /* Slightly smaller icon */
+            margin-top: 8px;
+            /* Reduce shadow for mobile */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+        }
+
+        /* 3. Change Interaction: Click/Tap for Mobile */
+        /* On mobile, 'hover' doesn't work well. We'll use a CSS trick
+          or, more reliably, a small amount of JavaScript for a tap to open/close. */
+        
+        /* Since pure CSS for tap-to-expand is tricky without hacking HTML (e.g., using a checkbox), 
+          we'll ensure the hover effect is subtle and then add a JS suggestion below. */
+        
+        /* Remove hover-only animation for main button on mobile to avoid unintended effects */
+        .cta-button:hover {
+            transform: scale(1.05); /* Keep scale, remove rotate */
+        }
+    }
     /* Horizontal scroll container */
     .horizontal-scroll {
       overflow: hidden;
